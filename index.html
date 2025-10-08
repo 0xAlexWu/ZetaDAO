@@ -2601,6 +2601,30 @@
               <button class="share-btn" onclick="shareArticle('zetachain-outlook')">📤 分享</button>
             </div>
           </div>
+          <div class="card article-card" data-article="zetachain-new-era">
+            <h4>ZetaChain：开启原生跨链的新篇章</h4>
+            <p>探索通用区块链的愿景，了解ZetaChain如何通过分层架构实现真正的跨链互操作性。</p>
+            <div class="card-actions">
+              <a href="#" class="read-more-btn">阅读更多</a>
+              <button class="share-btn" onclick="shareArticle('zetachain-new-era')">📤 分享</button>
+            </div>
+          </div>
+          <div class="card article-card" data-article="first-principles-interoperability">
+            <h4>从第一性原理看区块链互操作性</h4>
+            <p>从第一性原理出发，深度解析为什么加密世界的未来属于「通用区块链」。</p>
+            <div class="card-actions">
+              <a href="#" class="read-more-btn">阅读更多</a>
+              <button class="share-btn" onclick="shareArticle('first-principles-interoperability')">📤 分享</button>
+            </div>
+          </div>
+          <div class="card article-card" data-article="universal-apps">
+            <h4>ZetaChain的通用应用</h4>
+            <p>了解如何在ZetaChain上构建通用应用，实现一份合约覆盖所有区块链的跨链交互。</p>
+            <div class="card-actions">
+              <a href="#" class="read-more-btn">阅读更多</a>
+              <button class="share-btn" onclick="shareArticle('universal-apps')">📤 分享</button>
+            </div>
+          </div>
         </div>
       </section>
       <section id="videos">
@@ -2853,6 +2877,362 @@ contract CrossChainToken {
             <li>技术资源访问</li>
             <li>社区认可和奖励</li>
           </ul>
+        `
+      },
+      'zetachain-new-era': {
+        title: 'ZetaChain：开启原生跨链的新篇章',
+        meta: '来源：Alea Research | 阅读时间：15分钟',
+        content: `
+          <p>在区块链生态持续扩张的今天，<strong>多链并存</strong>已经成为常态。根据统计，目前已有上百条活跃公链和二层网络。用户和资产被分散在不同生态中，流动性被割裂，开发者需要在多条链上重复部署合约，用户则需要在不同钱包、网络之间反复切换。这种碎片化的格局，已经成为 Web3 进一步发展的最大阻碍。</p>
+
+          <p>ZetaChain 的愿景，是构建 <strong>Universal Blockchain（通用区块链）</strong>，让 Web3 的使用体验像互联网一样简单自然。就像我们访问网页时，不会关心服务器在哪台机器上，未来用户在区块链世界的操作，也无需思考自己身处哪条链。</p>
+
+          <h2>技术架构</h2>
+          
+          <p>为了解决多链互操作的复杂性，ZetaChain 在设计上采取了分层架构。每一层都承担不同的职责，协同实现跨链的完整流程：</p>
+
+          <h3>层级与功能</h3>
+          
+          <p><strong>基础链（Base Layer）</strong> - Cosmos SDK + CometBFT：提供 L1 的基础功能、区块共识、状态机、轻节点访问等。</p>
+          
+          <p><strong>共识层 / 验证者网络</strong> - PoS + 验证者：当前采用传统的 PoS 模型，由质押 ZETA 的验证者参与出块与治理。</p>
+          
+          <p><strong>观察者 & 签名层</strong> - 跨链监控 + 多方签名：验证者运行 ZetaClient 监视外链事件，经共识后通过阈值签名（TSS）执行跨链操作，从而避免单点私钥风险。</p>
+          
+          <p><strong>跨链模块</strong> - CrossChain、Vault、Observer 模块等：管理跨链消息的接收与处理，托管外链资产（锁定/释放），并在 ZetaChain 上生成 ZRC-20 映射资产。</p>
+          
+          <p><strong>执行层 / Universal EVM</strong> - ZetaEVM / ZVM：完全兼容以太坊 EVM，同时原生支持跨链调用与状态操作。开发者只需部署一个合约，即可实现"一次部署，全链触达"。</p>
+
+          <p>ZetaChain 的整体架构采用 <strong>hub-and-spoke（轮辐）模式</strong>：各条链只需与 ZetaChain 建立一次连接，而不必彼此逐一对接。这种模式让集成成本从指数增长转为线性增长，大幅提升扩展性。更重要的是，跨链调用具备<strong>原子性：</strong>如果多链操作中的某一步失败，系统会自动回滚，保证状态一致。这样不仅简化了网络的互操作，也为通用Apps的大规模应用奠定了基础。</p>
+
+          <p>同时，ZetaChain 将跨链所需的消息传递、状态执行、流动性托管和工具链，全部垂直整合在自身的 L1 网络之中。这种"全栈式"设计避免了对多层外部协议的依赖，也让系统整体更安全、简洁。</p>
+
+          <h2>主要特点与优势</h2>
+
+          <p>ZetaChain 并不是单纯的 L1，也不仅仅是一个跨链协议，而是一个<strong>统一的跨链操作系统</strong>。它的目标是为开发者、用户和生态提供一个更加简单、通用的区块链体验：</p>
+
+          <ul>
+            <li><strong>统一开发</strong>：开发者只需在 ZetaChain 上部署一个合约，就可以跨链调用、读写状态、管理资产，无需在多条链上重复开发和部署。</li>
+            
+            <li><strong>统一流动性</strong>：多链资产可以集中在 ZetaChain 上管理和调度，应用能够在一个资金池中使用来自不同链的流动性，释放更大的资本效率。</li>
+            
+            <li><strong>统一体验</strong>：用户从任意钱包、任意链入口发起操作，背后的跨链工作由 ZetaChain 自动完成。体验就像使用互联网一样，不再需要关心自己在哪条链。</li>
+            
+            <li><strong>原生比特币和非智能合约链支持</strong>：ZetaChain 独特的设计让比特币、Dogecoin 等非智能合约链的资产，也能直接进入 DeFi 和 dApp 世界。这是其他多数方案难以实现的。</li>
+            
+            <li><strong>全栈式一体化设计</strong>：跨链消息传递、状态执行、资产托管和开发工具，全部整合在 ZetaChain 的 L1 网络之中。开发者不必再拼装多个协议和工具，系统更简洁，安全性也更高。</li>
+          </ul>
+
+          <h2>跨链机制</h2>
+
+          <p>ZetaChain 的跨链能力不仅体现在资产层面，也体现在信息和逻辑层面。</p>
+
+          <p><strong>资产跨链</strong>：当用户从比特币、以太坊等链迁移资产到 ZetaChain 时，资产会锁定在原链的托管合约或 vault 中，ZetaChain 则在内部铸造对应的 ZRC-20 映射资产。用户提取时，ZRC-20 会被销毁，原链资产随之释放。这样实现了无需封装代币的原生跨链资产管理，既降低了风险，也让跨链更直接高效。</p>
+
+          <p><strong>信息跨链</strong>：ZetaChain 的观察者网络能够捕捉外链上的事件，经共识并通过 TSS 完成签名后，可以在目标链上执行调用。借助这一机制，开发者在 ZetaChain 上部署的合约可以直接与比特币、Solana、Sui 等链的应用或逻辑交互，实现真正的跨链智能合约。</p>
+
+          <p>资产和信息两者结合，让 ZetaChain 不仅能统一流动性，还能编排多链逻辑，从而支持更复杂、更强大的 Universal Apps。</p>
+
+          <h2>安全与代币机制</h2>
+
+          <p>ZetaChain 的原生代币 <strong>ZETA</strong> 是网络运行与安全的核心。它不仅承担交易费用的支付工具，更是保障网络共识与跨链安全的关键一环。</p>
+
+          <h3>经济层面</h3>
+          
+          <ul>
+            <li><strong>交易燃料费 (Gas Fee)</strong>：用户在 ZetaChain 上执行交易或跨链调用时，以 ZETA 支付燃料费。</li>
+            <li><strong>质押 (Staking)</strong>：验证者需质押 ZETA 才能参与出块与跨链签名，并通过奖励机制获得收益；若出现双签或滥用行为，则会触发 slashing 惩罚。</li>
+            <li><strong>跨链手续费</strong>：跨链消息传递、资产锁定与提取同样使用 ZETA 作为费用。</li>
+            <li><strong>治理</strong>：ZETA 持有人可参与链上治理，对新增链、模块升级和安全参数调整进行投票。</li>
+          </ul>
+
+          <h3>安全层面</h3>
+          
+          <ul>
+            <li><strong>PoS + 惩罚机制 (Slashing)</strong>：通过质押 ZETA 参与共识，确保验证者有强经济约束维持网络安全。</li>
+            <li><strong>多方阈值签名 (TSS)</strong>：跨链操作需要多个验证者共同签名，避免单点私钥风险，即使部分节点被攻破也无法盗取资产。</li>
+            <li><strong>观察者共识</strong>：验证者运行 ZetaClient 持续监测外链事件，经共识确认后才能触发跨链执行，防止欺诈与重放攻击。</li>
+            <li><strong>内建互操作</strong>：跨链逻辑直接内嵌在 L1 层，减少对外部桥接协议的依赖，从设计上缩小了攻击面。</li>
+          </ul>
+
+          <h2>生态应用</h2>
+
+          <p>在 ZetaChain 的生态中已经有一些拟打造或正在运行的通用App：</p>
+
+          <ul>
+            <li><strong>Beam</strong>：低滑点跨链 DEX，利用 ZetaChain 的跨链架构做原生交换。</li>
+            <li><strong>bitSmiley / bitUSD</strong>：原生比特币支持的稳定币 / CDP 机制，让 BTC 的流动性可以进入 DeFi 生态。</li>
+            <li><strong>Dust.fun</strong>：用于将各链的 "零散" 余额合并、兑换成用户需要的资产（BTC, ETH, USDC 等）。</li>
+            <li><strong>Zuno</strong>：通用去中心化交易所和ZetaChain流动性枢纽，支持在多个链之间一键交换资产，为用户提供深度流动性池。</li>
+          </ul>
+
+          <p>此外，ZetaChain 官方在 Alea 的 Deep Dive 中也提到，通过整合多个链的流动性、状态与逻辑，未来可能出现超级聚合器（Super Aggregator），将多个链上 DEX / 聚合器的流动性聚合到 ZetaChain 上统一执行。</p>
+
+          <h2>V36 UNISON 升级：更快、更强、更简洁</h2>
+
+          <p>2025 年 9 月 16 日，ZetaChain 正式完成了 <strong>V36 UNISON 升级</strong>。这是通用区块链发展历程中的重要里程碑，让网络在性能、兼容性和合约能力上全面提升。</p>
+
+          <ul>
+            <li><strong>性能提升</strong>：升级至最新 Cosmos SDK，网络运行更快、更稳定，能支撑大规模应用。</li>
+            <li><strong>以太坊兼容性增强</strong>：全面支持 Cancun 升级，开发者可以无缝使用以太坊工具，同时触达包括原生比特币在内的多链生态。</li>
+            <li><strong>智能合约新能力</strong>：新增 EVM 预编译合约，开发者可直接在链上调用质押、治理、资金操作等功能，减少链下依赖。</li>
+          </ul>
+
+          <p>对于开发者来说，现有应用无需修改即可运行，但迁移到新接口将带来更简洁的代码与更强的能力。用户则无需任何操作，即可享受更快、更顺畅的体验。</p>
+
+          <p><strong>UNISON 升级不仅是性能与功能的迭代，更是 ZetaChain 愿景的延伸。</strong></p>
+
+          <p>它为下一代 Universal Apps 奠定了基础，让开发者能更轻松地编排跨链逻辑，让用户在任意链和钱包中一键接入 Web3 世界。接下来，ZetaChain 将继续优化跨链开发的体验，探索应用层面的创新，利用通用区块链的特性积极响应市场趋势，推动Web3走向真正的融会贯通与自然互联。</p>
+
+          <p><strong>原文：</strong><a href="https://alearesearch.io/deep-dives/zetachain/" target="_blank">https://alearesearch.io/deep-dives/zetachain/</a></p>
+        `
+      },
+      'first-principles-interoperability': {
+        title: '从第一性原理看区块链互操作性',
+        meta: '来源：ZetaChain官方博客 | 阅读时间：20分钟',
+        content: `
+          <p><strong>TLDR; 当前大多数互操作性方案都是搭建在单独的区块链之上，导致用户体验与开发体验的割裂。ZetaChain则选择了不同的路径：把跨链逻辑直接写进了一个能连接所有链（包括比特币）的 Layer1 区块链里。本文将从第一性原理出发，聊聊为什么加密世界的未来属于「通用区块链」。</strong></p>
+
+          <h2>从比特币到多链生态</h2>
+
+          <p>区块链生态早已从比特币演变为多链并存的格局，每条链都有其独特定位。这种"专精"推动了创新，也不可避免地带来了生态的碎片化。当前主流的互操作性方案比如跨链桥、通信协议与意图驱动机制大多是外挂在现有链之上的机制，虽然提升了链之间的连接性，但也增加了复杂度和安全风险。</p>
+
+          <p>ZetaChain 则从架构层面重新出发：作为一个新型 Layer1 区块链，在共识机制中支持原生跨链能力，连接包括比特币在内的所有主流网络。</p>
+
+          <p>本文将通过第一性原理的视角，重新审视何为真正的区块链互操作性。</p>
+
+          <h2>区块链碎片化的本质</h2>
+
+          <p>区块链自诞生起就以主权自治为核心特征：比特币开创了去中心化的价值传输，以太坊带来了通用智能合约，而 Solana、Avalanche、Cosmos 等后起之秀则在性能和扩展性上不断突破。但这种"各自为政"的发展路径也导致链与链之间的严重割裂，形成"孤岛效应"，并带来诸多成本：</p>
+
+          <h3>资本效率低下</h3>
+          <p>根据 <a href="https://defillama.com/chains" target="_blank">DeFiLlama</a> 数据显示，超过 900 亿美元的DeFi TVL分散于多个割裂的链上生态，流动性无法高效复用。</p>
+
+          <h3>开发者负担加重</h3>
+          <p>如今近<a href="https://www.developerreport.com/developer-report?s=36-of-total-developers-in-2024-work-on-multiple-chains" target="_blank">三分之一的开发者</a>正在构建多链应用，但各链工具链、合约模型与运行环境迥异，极大增加了开发、测试与部署的复杂程度。</p>
+
+          <h3>安全风险上升</h3>
+          <p>2022 年，跨链桥安全漏洞导致的损失高达 <a href="https://www.chainalysis.com/blog/cross-chain-bridge-hacks-2022/" target="_blank">20 亿美元</a>，占当年加密黑客攻击总损失的近七成。</p>
+
+          <h3>可组合性受限</h3>
+          <p>DeFi 的魅力之一在于合约的高度可组合性，但跨链逻辑却往往需要<a href="https://chain.link/education-hub/blockchain-interoperability-challenges" target="_blank">笨重的布丁式方案</a>。</p>
+
+          <h3>用户体验障碍</h3>
+          <p>管理多个钱包、跨链桥和 Gas 代币对用户极其不友好，很大程度上阻碍了主流用户使用多链应用。</p>
+
+          <p>然而，这些问题的根本并不在执行层面，而在于架构层面。我们不能将多条链拼接在一起就指望它们像单链一样运行。</p>
+
+          <h2>互操作性的第一性原理</h2>
+
+          <p>真正的互操作性，不仅是打通数据和通信，更是实现跨链间逻辑的协同执行。在不破坏链原有特性的前提下，实现统一的交互体验，至少应满足以下六个核心条件：</p>
+
+          <h3>信任最小化的安全性</h3>
+          <p>跨链机制应避免依赖中心化中介，通过密码学实现验证方式，确保每条链都能独立验证外部输入。</p>
+
+          <h3>标准化通信与状态感知</h3>
+          <p>高效的互操作性需要统一的跨链通信协议和状态感知机制，让应用能观察和响应所有链上的状态变化，实现真正的跨链可组合性。</p>
+
+          <h3>原子性执行</h3>
+          <p>跨链操作必须保证「要么全部成功，要么全部失败」，避免出现中间态或漏洞，使用户或协议处于不一致的状态。</p>
+
+          <h3>主权兼容性</h3>
+          <p>任何一条链都不应该为实现互操作性而改变自身协议和特点。互操作性方案应充分尊重并利用链的原生特性，而非强制统一。</p>
+
+          <h3>可扩展性</h3>
+          <p>跨链交互越频繁，系统越要有扩展能力。它既要能在多链同时运作时依然高效低成本，又要避免让和交易无关的链被拖进协调过程，造成资源浪费。</p>
+
+          <h3>开发者体验</h3>
+          <p>一个好的多链开发框架应降低门槛，支持现有工具与语言，减少部署复杂度，提升开发效率。</p>
+
+          <p>综上所述，这些要素共同构成了完整的互操作性框架，让多链协作像在单链上开发与使用一样流畅。</p>
+
+          <h2>主流互操作方案的优势和局限</h2>
+
+          <p>目前跨链生态已涌现多种解决路径，但大多是"围绕连接做优化"，而非从底层架构重塑。</p>
+
+          <h3>跨链桥</h3>
+          <p>跨链桥是最早尝试解决跨链的方案。 其基本原理是在一条链上锁定资产，并在另一条链上铸造对应的包装资产。Wormhole、Synapse 和 cBridge 等跨链桥开启了跨链流动性和资产转移的 <a href="https://4pillars.io/en/articles/interop-3-time-for-applications" target="_blank">"互操作 1.0"时代</a>。跨链桥的更新迭代也改进了速度和成本。例如，Stargate 引入资金池的设计来支持原生代币的兑换并提供深度流动性。Circle 的 CCTP 则采用销毁与重铸模型在链间转移USDC，避免了使用包装代币。再比如 LI.FI 聚合多种类型的跨链桥，来实现跨链路径、成本和速度的优化。</p>
+
+          <p>尽管现在跨链桥的设计有所进步，但其局限性很明显：它们依赖外部多签或托管方、缺乏原子性执行的保证，且要求两端链上都有充足流动性，反而导致市场进一步碎片化。跨链桥充当的是基础设施，而非运行环境。它们本质上是"通道"，不是逻辑执行平台。</p>
+
+          <h3>跨链通信协议</h3>
+          <p>LayerZero、Axelar、Hyperlane 等跨链通信协议支持不同链之间智能合约的数据和消息传递，是资产之外的"状态通道"。这一领域的重要创新包括<strong>全链代币框架</strong>（比如 OFT、NTT 和 ITS），以及各种跨链验证层，例如基于预言机的中继、LayerZero 的去中心化验证网络（DVN）、Hyperlane 的链间安全模块（ISM），以及 Axelar 的 Amplifier 框架。</p>
+
+          <p>跨链通信协议比跨链桥更灵活，但也要求开发者处理更为复杂的跨链逻辑和状态统一。对于大多数简单用例（例如在A链上铸造代币，然后在B链上映射出相应资产）是比较容易实现的。然而，对于跨链借贷等更复杂的应用，缺乏共享状态和执行环境使得开发和协调变得极为困难。在这种情况下，跨链逻辑演变成了一个分布式系统工程难题。开发者需要应对链与链之间海量的异步逻辑(asynchronous logic)，无法像在单链开发中那样使用简单同步的智能合约模型。</p>
+
+          <h3>链抽象</h3>
+          <p>链抽象将互操作性的关注点从底层建设转向了用户体验。它并未在协议层面解决互操作性，只是对其进行了隐藏。此类方案不是直接连接多条链，而是通过"意图(Intent) 驱动模型"和智能账户层统一交互界面。如 Across、Relay 处理跨链转账，Superform、EtherFi 支持多链资产管理，UniversalX、OneBalance 则构建统一的钱包体验。</p>
+
+          <p>这类方案极大优化了前端体验，但其底层依旧依赖跨链桥和通信协议，也无法提供原生的跨链执行环境。</p>
+
+          <h2>ZetaChain 的互操作性路径</h2>
+
+          <p>要真正实现多链之间的统一，互操作性必须成为区块链底层的原生功能。ZetaChain 正是在这一思路下诞生的。</p>
+
+          <h3>ZetaChain：通用区块链</h3>
+          <p>ZetaChain 是一个基于权益证明（Proof-of-Stake）的 Layer1通用区块链，将互操作性直接写入共识层中。由于跨链逻辑在共识层原生运行，共识层对外即体现为一个<a href="https://www.zetachain.com/docs/start/evm/" target="_blank">通用执行环境</a>，能够原生地验证并最终确定跨链交易。</p>
+
+          <p>与依赖第三方中继的方案不同，ZetaChain 作为通用枢纽，通过单一统一的环境读取和写入各类异构区块链（包括比特币、Solana、以太坊等）。所有跨链交易均由 ZetaChain 自身的验证者集通过 CometBFT 共识引擎进行验证和最终敲定，无需依赖多签名或外部轻客户端。</p>
+
+          <h3>原生跨链执行与通用智能合约</h3>
+          <p>ZetaChain的核心创新是<a href="https://www.zetachain.com/docs/start/app/" target="_blank"><strong>通用智能合约</strong></a>，即部署在ZetaChain 通用EVM上的智能合约， 可接收来自任意连接链的资产和调用，并向任意链发送指令。通用智能合约的跨链逻辑可以原生编排，无需多链部署或人工同步状态。</p>
+
+          <p>ZRC-20 标准则实现了原生资产跨链，无需包装代币。ZetaChain 使用验证者托管机制管理跨链资产，统一流动性池，实现 BTC、ETH、USDC 等原生资产的跨链流通。同时，ZetaChain还支持<a href="https://www.zetachain.com/docs/developers/standards/token/" target="_blank">通用代币</a>和<a href="https://www.zetachain.com/docs/developers/standards/nft/" target="_blank">通用NFT标准</a>，保证元数据一致，并在跨链交易失败时安全回滚。</p>
+
+          <h3>丝滑的用户与开发体验</h3>
+          <p>对于用户而言，ZetaChain 实现了单链上的多链交互。用户可以从任意连接的网络发起交易，无需自己处理跨链手续费、兑换 gas 代币，也不必频繁切换钱包或网络。</p>
+
+          <p>而开发者可使用标准的 Solidity 工具链，配合ZetaChain提供的 <a href="https://www.zetachain.com/docs/developers/frontend/universalkit/" target="_blank">UniversalKit</a> 工具包，一站式实现跨链资产管理、状态读取、质押，以及<a href="https://www.zetachain.com/docs/reference/apps/wallets/#bitcoin-wallets" target="_blank">比特币钱包的集成</a>等功能。开发者只需在 ZetaChain 上部署一次，即可面向所有链运行。</p>
+
+          <h2>ZetaChain 在互操作性栈中的独特位置</h2>
+
+          <p>通过将互操作性嵌入核心 L1 架构并提供原生的跨链执行，ZetaChain 提供了一种与其他跨链协议截然不同的解决方案。相比于跨链桥协议，ZetaChain支持原生可编程的跨链逻辑，而非仅转移资产。也不同于跨链通信协议，ZetaChain是共享状态与执行的统一环境，在保持对所有网络原生连接的同时，极大降低开发的复杂程度。链抽象替用户隐藏多链复杂性，而ZetaChain将用户体验抽象和底层执行能力合二为一，并由共识层提供安全保障。</p>
+
+          <p>部署在 ZetaChain 上的智能合约<strong>天然具备</strong>对所有连接链的访问权，并能完全掌控自身逻辑、资产和执行流程，这让开发者能够以最小阻力构建强大的 <a href="https://www.zetachain.com/docs/start/app/" target="_blank">通用应用（Universal Apps）</a>。用户则可以在 Web3 中的任意链上无缝访问这些应用。</p>
+
+          <h2>未来之路</h2>
+
+          <p>区块链的下一个突破，不在于连接更多公链，而在于让它们能够真正无缝协作。</p>
+
+          <p>通过 ZetaChain，一个部署在 Base 链上的借贷应用，可以直接使用 Solana 上的原生资产作为抵押；一次发起于以太坊的 DAO 投票，也能同步驱动比特币网络上的链上执行。开发者只需在 ZetaChain 上部署一次，就能覆盖所有主流区块链，实现跨链调用与协同。这种跨生态的可组合性，让开发者能够融合不同链的技术优势，构建出任何单一链都难以独立支持的创新应用。</p>
+
+          <p>衡量多链生态的进步，已经不再是"连接了多少条链"，而是"创意和价值在链之间流动的自由度"。加密世界的未来，不该是链与链之间的割裂，而是通用化、协同化的全局网络。ZetaChain，正在把这个未来变成现实。</p>
+
+          <h2>参考资料</h2>
+          <ul>
+            <li>2024 developer report by Electric Capital</li>
+            <li>Vulnerabilities in Cross-chain Bridge Protocols Emerge as Top Security Risk</li>
+            <li>The Complete Guide to Crosschain Interoperability</li>
+            <li>Interop 3.0 - Fundamental is Built, Its Time for Application</li>
+            <li>Waters Wavelength Podcast: Deutsche Bank's Boon-Hiong Chan</li>
+            <li>Blockchain Interoperability Challenges Explained</li>
+            <li>Cross-Chain Interoperability Report 2024</li>
+          </ul>
+
+          <p><strong>原文链接：</strong><a href="https://www.zetachain.com/blog/a-first-principles-approach-to-blockchain-interoperability" target="_blank">https://www.zetachain.com/blog/a-first-principles-approach-to-blockchain-interoperability</a></p>
+        `
+      },
+      'universal-apps': {
+        title: 'ZetaChain的通用应用',
+        meta: '来源：ZetaChain技术博客 | 阅读时间：15分钟',
+        content: `
+          <p>ZetaChain 是一个内置跨链能力且兼容 EVM 的 Layer1 区块链。部署在 ZetaChain 上的智能合约可以直接处理来自任意连接链（如 Ethereum、Base、Polygon、BNB、Solana、Bitcoin）的调用。同时，它们也可以主动向这些链上的合约发起调用。合约调用可以携带任意调用数据，包括 Gas 费和支持的 ERC-20 代币。</p>
+
+          <h2>ZRC-20：跨链资产的统一表示</h2>
+
+          <p>从其他链转移到 ZetaChain 的 Gas 和 ERC-20 代币，会在 ZetaChain 上以 <strong>ZRC-20</strong> 形式存在（类似 ERC-20 的代币标准）。</p>
+
+          <p>举个例子：当你在 Ethereum 发起调用并携带 ETH 时，ZetaChain 上的合约接收到的是 <strong>ZRC-20 ETH</strong>。原生 ETH 会被锁定在 Ethereum 上的 ZetaChain 托管合约中，而等量的 ZRC-20 ETH 会在 ZetaChain 上铸造并转入目标合约。任何人都可以无许可地将 ZRC-20 赎回成原生资产。</p>
+
+          <h2>Gateway：跨链交互的入口</h2>
+
+          <p>而跨链调用的核心机制就是 <strong>Gateway</strong>。每一条连接的链都有一个 Gateway，作为和 ZetaChain 交互的唯一入口：在 EVM 链（Ethereum、Polygon 等）上是 Gateway 合约，在 Solana 上是 Gateway 程序，在 Bitcoin 上是 Gateway 地址。ZetaChain 自身也有一个 Gateway 合约，用来触发向外的跨链调用。</p>
+
+          <p>假设你构建了一个合约，能够接收某条链上的代币，完成兑换后再提现到另一条链。用户在 Ethereum 的 Gateway 上发起调用时，只需提供三项信息：<strong>输入的代币（如 USDC）、要调用的 ZetaChain 合约、以及目标代币地址的调用数据</strong>。</p>
+
+          <p>ZetaChain 的验证者在观察到 Ethereum 上的 Gateway 事件后，会在 ZetaChain 上触发对应的交换合约。该合约收到 USDC 和调用数据后，立即执行兑换，并将目标代币提现到另一条链（例如 Bitcoin）。这样，Ethereum 用户仅通过<strong>一笔交易</strong>，就完成了整个跨链流程：从 Ethereum 向 ZetaChain 发起调用，在 ZetaChain 上将 ZRC-20 USDC 兑换为 ZRC-20 BTC，并最终把原生 BTC 提现到 Bitcoin 地址。</p>
+
+          <p>整个过程中，用户完全不必关心 Gas、跨链桥或钱包切换。而资金兑换只是最直观的应用场景。借贷平台、NFT 市场、多链治理、收益聚合器等，也都能通过相同的机制在 ZetaChain 上轻松实现。我们把这类应用统称为 <strong>Universal Apps（通用应用）</strong>。它们能够在一份合约中，编排和处理所有链的复杂跨链逻辑。对开发者来说，跨链开发就像写单链 App 一样简单：逻辑都集中在 ZetaChain 上，既能处理进入调用，也能向外发起调用。</p>
+
+          <h2>"Hello, World!" 示例</h2>
+
+          <pre><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.26;
+ 
+import "@zetachain/protocol-contracts/contracts/zevm/GatewayZEVM.sol";
+ 
+contract Universal is UniversalContract {
+    event HelloEvent(string, string);
+ 
+    function onCall(
+        MessageContext calldata context,
+        address zrc20,
+        uint256 amount,
+        bytes calldata message
+    ) external override {
+        string memory name = abi.decode(message, (string));
+        emit HelloEvent("Hello: ", name);
+    }
+}</code></pre>
+
+          <p><code>onCall</code> 是一个特殊函数，每当某条链上的 Gateway 被调用，它都会在 ZetaChain 上被触发。像Ethereum、Solana、Bitcoin 的 Gateway 全都调用同一个 <code>onCall</code>。你可以通过 <code>context.chainID</code> 或其他参数来区分不同链并执行不同逻辑。</p>
+
+          <p>从通用应用发起跨链调用也非常简单：</p>
+
+          <pre><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.26;
+
+import "@zetachain/protocol-contracts/contracts/zevm/GatewayZEVM.sol";
+
+contract Universal is UniversalContract {
+    GatewayZEVM public immutable gateway;
+    event HelloEvent(string, string);
+    error TransferFailed();
+
+    constructor(address payable gatewayAddress) {
+        gateway = GatewayZEVM(gatewayAddress);
+    }
+
+    function call(
+        bytes memory receiver,
+        address zrc20,
+        bytes calldata message,
+        CallOptions memory callOptions,
+        RevertOptions memory revertOptions
+    ) external {
+        (, uint256 gasFee) = IZRC20(zrc20).withdrawGasFeeWithGasLimit(
+            callOptions.gasLimit
+        );
+        if (!IZRC20(zrc20).transferFrom(msg.sender, address(this), gasFee)) {
+            revert TransferFailed();
+        }
+        IZRC20(zrc20).approve(address(gateway), gasFee);
+        gateway.call(receiver, zrc20, message, callOptions, revertOptions);
+    }
+
+    function onCall(
+        MessageContext calldata context,
+        address zrc20,
+        uint256 amount,
+        bytes calldata message
+    ) external override {
+        string memory name = abi.decode(message, (string));
+        emit HelloEvent("Hello on ZetaChain", name);
+    }
+}</code></pre>
+
+          <h3>调用步骤：</h3>
+          <ol>
+            <li>查询目标链的 Gas 费（以该链的 ZRC-20 Gas 代币计价）</li>
+            <li>授权 Gateway 使用相应的 Gas 费 ZRC-20</li>
+            <li>执行 <code>gateway.call</code></li>
+          </ol>
+
+          <h3>参数说明：</h3>
+          <ul>
+            <li><code>zrc20</code>：用来指定跨链调用的目标链（例如，使用 ZRC-20 ETH 地址来调用 Ethereum）</li>
+            <li><code>receiver</code>：目标链上的接收合约</li>
+            <li><code>message</code>：任意调用数据</li>
+          </ul>
+
+          <p>默认会调用目标合约的 <code>onCall</code>，但你也可以指定任意函数。</p>
+
+          <h2>Gateway 的高级功能</h2>
+
+          <p>ZetaChain 的 Gateway 为开发者提供了一整套灵活的跨链交互方式，几乎涵盖所有复杂场景：</p>
+
+          <ul>
+            <li><strong>资产存取</strong>：支持存入原生 Gas 或已支持的 ERC-20 代币，并可以将 ZRC-20 代币提现回原生资产。</li>
+            <li><strong>调用模式</strong>：既可以在没有资产的情况下发起跨链调用，也可以选择"存入并调用"，或者"提现并调用"，满足不同业务需求。</li>
+            <li><strong>函数灵活性</strong>：跨链调用不仅限于目标合约的 <code>onCall</code>，还可以直接调用任意函数。</li>
+            <li><strong>错误与异常处理</strong>：支持跨链调用的回退处理（例如 Ethereum → ZetaChain <code>onCall</code> → Ethereum <code>onRevert</code>），以及中止处理机制（Ethereum → ZetaChain <code>onCall</code> → ZetaChain <code>onAbort</code>）。</li>
+          </ul>
+
+          <h2>总结</h2>
+
+          <p>借助 <strong>ZetaChain</strong>，用户可以从任何区块链与你的应用交互，而无需担心跨链桥、代币兑换，或在多条链上管理 Gas 费用，一切都能自动完成、无缝衔接。无论是多链 DeFi 平台、NFT 市场、链游，还是更多创新的互联功能，都能在 ZetaChain 上轻松实现。如果你一直希望构建极简跨链的复杂应用，那么 <strong>ZetaChain 就是最佳的起点</strong>。立即加入 ZetaChain 开发者社区，让你的想法落地吧！</p>
+
+          <p><strong>原文链接：</strong><a href="https://medium.com/zetachain-tech-blog/introduction-to-universal-apps-on-zetachain-15c1a608caea" target="_blank">https://medium.com/zetachain-tech-blog/introduction-to-universal-apps-on-zetachain-15c1a608caea</a></p>
         `
       }
     };
